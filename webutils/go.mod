@@ -1,3 +1,3 @@
-module farooque.in/WebServicesRaw/webutils
+module github.com/farooquekhan/webserviceraw/webutils
 
 go 1.15
