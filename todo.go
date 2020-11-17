@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"farooque.in/WebServicesRaw/webservice"
+	"github.com/farooquekhan/webserviceraw/webservice"
 )
 
 func main() {
