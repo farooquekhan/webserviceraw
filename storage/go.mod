@@ -1,3 +1,3 @@
-module farooque.in/WebServicesRaw/storage
+module github.com/farooquekhan/webserviceraw/storage
 
 go 1.15
