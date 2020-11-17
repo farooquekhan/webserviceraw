@@ -14,9 +14,28 @@ type TodoList []TodoItem
 var store TodoList
 var currentID = 1
 
-// Get returns the current TodoList
-func Get() TodoList {
+// GetAll returns the current TodoList
+func GetAll() TodoList {
 	return store
+}
+
+// GetItem returns a single item for given id
+func GetItem(id int) (bool, TodoItem) {
+
+	index := -1
+
+	for i, items := range store {
+		if items.ID == id {
+			index = i
+			break
+		}
+	}
+
+	if index != -1 {
+		return true, store[index]
+	}
+
+	return false, TodoItem{}
 }
 
 // AddUpdate function adds a new item to the list
