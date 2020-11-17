@@ -14,8 +14,8 @@ type TodoList []TodoItem
 var store TodoList
 var currentID = 1
 
-// GetAll returns the current TodoList
-func GetAll() TodoList {
+// GetAllItems returns the current TodoList
+func GetAllItems() TodoList {
 	return store
 }
 
@@ -38,8 +38,8 @@ func GetItem(id int) (bool, TodoItem) {
 	return false, TodoItem{}
 }
 
-// AddUpdate function adds a new item to the list
-func AddUpdate(newItem TodoItem) int {
+// AddUpdateItem function adds a new item to the list
+func AddUpdateItem(newItem TodoItem) int {
 
 	index := -1
 
@@ -62,8 +62,8 @@ func AddUpdate(newItem TodoItem) int {
 	return newItem.ID
 }
 
-// Remove removes the item with given id from the list
-func Remove(id int) bool {
+// RemoveItem removes the item with given id from the list
+func RemoveItem(id int) bool {
 	index := -1
 
 	for i, item := range store {
