@@ -1,3 +1,3 @@
-module farooque.in/WebServicesRaw/webservice
+module github.com/farooquekhan/webserviceraw/webservice
 
 go 1.15
