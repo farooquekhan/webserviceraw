@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	"farooque.in/WebServicesRaw/storage"
-	"farooque.in/WebServicesRaw/webutils"
+	"github.com/farooquekhan/webserviceraw/storage"
+	"github.com/farooquekhan/webserviceraw/webutils"
 )
 
 var funcTable map[string]func(w http.ResponseWriter, r *http.Request)
