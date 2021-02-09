@@ -22,7 +22,7 @@ func init() {
 }
 
 func handleList(w http.ResponseWriter, r *http.Request) {
-	webutils.HandleSuccess(&w, storage.Get())
+	webutils.HandleSuccess(&w, storage.GetAllItems())
 }
 
 func handleAddUpdate(w http.ResponseWriter, r *http.Request) {
@@ -48,7 +48,7 @@ func handleAddUpdate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	id := storage.AddUpdate(item)
+	id := storage.AddUpdateItem(item)
 
 	log.Println("Added/Updated item:", item)
 
@@ -78,7 +78,7 @@ func handleRemove(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if storage.Remove(id) {
+	if storage.RemoveItem(id) {
 		webutils.HandleSuccess(&w, id)
 	} else {
 		webutils.HandleError(&w, 400, "Bad Request", "ID not found", nil)
